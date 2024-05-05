@@ -1,4 +1,5 @@
 const form = document.querySelectorAll(".form")
+const btns = document.querySelectorAll(".btn")
 
 function resetForm(){
     form.forEach( value =>{
@@ -6,18 +7,25 @@ function resetForm(){
     })
 }
 
+function resetSelect(){
+    btns.forEach(value =>{
+        value.classList.remove("selectedBtn")
+    })
+}
+
 function openForm(data){
     resetForm()
+    resetSelect()
     if(data == "aluno"){
-        console.log(data);
+        btns[0].classList.add("selectedBtn")
         form[0].classList.add('open')
     }
     else if(data == "professor"){
+        btns[1].classList.add("selectedBtn")
         form[1].classList.add('open')
     }
     else if(data == "fornecedor"){
+        btns[2].classList.add("selectedBtn")
         form[2].classList.add('open')
     }
-
-    console.log(form);
 }

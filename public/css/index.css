@@ -60,6 +60,10 @@
     background-color: #b5d1f369;
 }
 
+.selectedBtn{
+    background-color: #bad8fc !important;
+}
+
 .form{
     width: 500px;
     height: 500px;

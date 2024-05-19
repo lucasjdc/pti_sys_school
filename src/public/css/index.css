@@ -77,7 +77,7 @@
     animation: formAnimation 1s;
 }
 
-.form button{
+.form .button{
    align-self: flex-end;
    height: 50px;
    margin-top: 15px;

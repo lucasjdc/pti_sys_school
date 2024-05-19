@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+
+  app:
+    image: node:alpine
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+    volumes:
+      - .:/node/app
+
   postgres:
     image: postgres:latest
     container_name: meu-postgres
@@ -11,6 +22,3 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "5445:5432"
-    volumes:
-      - ./data:/var/lib/postgresql/data
-      - ./resources:/docker-entrypoint-initdb.d

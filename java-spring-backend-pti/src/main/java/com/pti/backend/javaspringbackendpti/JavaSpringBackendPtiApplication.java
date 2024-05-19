@@ -1,5 +1,4 @@
 package com.pti.backend.javaspringbackendpti;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,5 +9,4 @@ public class JavaSpringBackendPtiApplication {
 
 		SpringApplication.run(JavaSpringBackendPtiApplication.class, args);
 	}
-
 }

@@ -45,6 +45,8 @@ A aplicação estará disponível em [http://localhost:3000](http://localhost:30
 - PostgreSQL
 - HTML
 - CSS
+- Prisma
+- ORM
 
 ## Uso
 

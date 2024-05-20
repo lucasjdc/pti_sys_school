@@ -13,7 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-
 app.post("/cadastro", (req: Request, res: Response) => {
     console.log(req.body);
     res.render('index.ejs')

@@ -15,3 +15,5 @@ Tecnologias Utilizadas
     - Spring Boot
     - Spring Data JPA
     - PostgreSQL
+
+    ## Estrutura de Diretórios

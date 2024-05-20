@@ -4,12 +4,10 @@ services:
 
   app:
     build: .
-    entrypoint: .docker/entrypoint.sh
-    restart: always
+    # entrypoint: .docker/entrypoint.sh
+    container_name: pti_senac
     ports:
       - 3000:3000
-    environment:
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/Universidade?schema=public
     volumes:
       - .:/node/app
     depends_on:
@@ -22,7 +20,8 @@ services:
     restart: always
     environment:
       POSTGRES_DB: Universidade
-      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
